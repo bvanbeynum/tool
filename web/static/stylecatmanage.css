@@ -1,0 +1,19 @@
+body {
+    font-family: Verdana;
+    font-size: 10px;
+    background-color: #c8d3c8;
+}
+h1 {
+    font-family: Verdana;
+    font-size: 24px;
+}
+th {
+    text-decoration: underline;
+}
+a {
+    color: Blue;
+}
+
+.countData {
+    text-align: center;
+}

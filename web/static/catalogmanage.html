@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+	/*
+	protected void Page_Load(object sender, EventArgs e) {
+		string[] strFiles = Directory.GetFiles(Request.ServerVariables["APPL_PHYSICAL_PATH"], "*.csv");
+		Random rndUrl = new Random();
+		
+		for (int intFileIndex = 0; intFileIndex < strFiles.Length; intFileIndex++) {
+			StreamReader objReader = new StreamReader(strFiles[intFileIndex]);
+			int intUserCount = 0;
+
+			while (!objReader.EndOfStream) {
+				intUserCount++;
+				objReader.ReadLine();
+			}
+			objReader.Close();
+			intUserCount--;
+
+			string strFileName = strFiles[intFileIndex].Substring(strFiles[intFileIndex].LastIndexOf("\\") + 1).Replace(".csv", "");
+			string strFileDate = strFileName.Substring(5) + "/" + strFileName.Substring(0, 4);
+
+			HtmlTableRow row = new HtmlTableRow();
+			HtmlTableCell cell = new HtmlTableCell();
+			cell.InnerHtml = "<a href=\"" + strFileName + ".csv?r=" + Convert.ToString(rndUrl.Next()) + "\" target=\"_new\">" + strFileDate + "</a>";
+			row.Cells.Add(cell);
+
+			cell = new HtmlTableCell();
+			cell.Align = "center";
+			cell.InnerHtml = Convert.ToString(intUserCount);
+			row.Cells.Add(cell);
+			tblList.Rows.Add(row);
+		}
+	}
+	*/
+</script>
+
+<html>
+<head>
+<title>Catalog Management</title>
+<link rel="stylesheet" type="text/css" href="/grahamtool/stylecatmanage.css" />
+</head>
+<body>
+
+<div>
+<h1>Catalog Management</h1>
+</div>
+
+<table id="tblList" runat="server" width="300">
+<tr>
+<th align="left">File</th>
+<th>User Counts</th>
+</tr>
+{{CatalogTable}}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "ServerPackage",
+  "version": "0.0.0",
+  "description": "Web server setup",
+  "main": "server.js",
+  "repository": "",
+  "author": "Brett",
+  "dependencies": {
+    "express": "~3.2.4"
+  }
+}
